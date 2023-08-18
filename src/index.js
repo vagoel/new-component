@@ -121,8 +121,8 @@ mkDirPromise(componentDir)
   .then((template) => {
     // We also need the `index.js` file, which allows easy importing.
     writeFilePromise(indexPath, prettify(indexTemplate));
-    writeFilePromise(testFilePath, prettify(indexTemplate));
-    writeFilePromise(typesFilePath, prettify(indexTemplate));
+    writeFilePromise(testFilePath, prettify(""));
+    writeFilePromise(typesFilePath, prettify(""));
     return template;
   })
   .then((template) => {
